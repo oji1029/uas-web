@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-image: url(img/2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper img{
+    float:left;
+    background: none;
+    height: 100px;
+   
+}
+.wrapper {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71, #f39c12);
+    background-size: 400% 400%;
+    color: white;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    75% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes waveAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    background: none;
+}
+
+.banner-text {
+    background: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    width: 45%;
+    padding: 40px 0;
+    text-align: center;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    box-shadow: 2px 2px 2px 4px rgb(235, 57, 57);
+    background-color: rgba(0,0,0,0,3);
+    color: #050505;
+    font-weight: bold;
+    text-shadow: 2px 2px #c9fa58;
+    border: 10px inset #fff;
+   
+}
+.banner-text p {
+   border: 2px solid rgb(255, 255, 255);
+   box-shadow: 0 2px 4px rgb(236, 139, 59);
+   border-radius: 5px;
+   width: 350px;
+    padding: 10px ; 
+    margin-left: 20%;
+    margin-top: 20px;
+    background: none;
+    text-align: justify;
+}
+
+a.tbl-pink {
+    box-shadow: 0 2px 4px rgb(236, 139, 59);
+    display: inline-block;
+    padding: 10px 50px;
+    border: 2px solid #fff;
+    text-decoration: none;
+    color: #070707;
+    background: none;
+    margin-top: 10%;
+    cursor: pointer;
+  }
+  
+  a.tbl-pink:hover {
+    background: #f8fced;
+    text-decoration: none;
+  }

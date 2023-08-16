@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soal 1</title>
+  <script>
+    function cekAngka(angka) {
+      if (angka > 0 && angka % 2 === 1) {
+        return "GANJIL POSITIF";
+      } else if (angka < 0 && Math.abs(angka) % 2 === 1) {
+        return "GANJIL NEGATIF";
+      } else if (angka > 0 && angka % 2 === 0) {
+        return "GENAP POSITIF";
+      } else if (angka < 0 && Math.abs(angka) % 2 === 0) {
+        return "GENAP NEGATIF";
+      } else {
+        return "Nol";
+      }
+    }
+
+    function cek() {
+      var input = parseInt(document.getElementById("inputAngka").value);
+      var hasil = cekAngka(input);
+      document.getElementById("hasil").innerText = hasil;
+    }
+  </script>
+  <style>
+    body {
+      background-image: url(img/1.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+   .menu {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71, #f39c12);
+    background-size: 400% 400%;
+    text-transform: uppercase;
+    animation: gradientAnimation 10s ease infinite;
+    font-size: 40px;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    75% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes waveAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+a.tbl-pink {
+    display: inline-block;
+    padding: 10px 10px;
+    border: 2px solid #fff;
+    text-decoration: none;
+    color: #070707;
+    background: none;
+    box-shadow: 0 2px 4px rgb(34, 33, 33);
+    cursor: pointer;
+  }
+  
+  a.tbl-pink:hover {
+    background: #f8fced;
+    text-decoration: none;
+  }
+   h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+  
+   }
+   .container {
+  
+    width: 400px;
+    margin: 10% 33%;
+    background-color: rgb(156, 238, 238);
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-box {
+    margin-bottom: 10px;
+  }
+  
+  .btn-check {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-check:hover {
+    background-color: #d44e4e;
+  }
+  img {
+    float:left;
+    background: none;
+    height: 100px;
+    margin: 20px;
+  }
+
+  </style>
+</head>
+<body>
+  <img src="img/logo.png" alt="">
+  <div class="menu">
+    <a href="index.html" class="tbl-pink">MENU</a>
+    <a href="http://localhost/uas web/soal2.php" class="tbl-pink">SOAL 2</a>
+  </div>
+  <div class="container">
+    <h1>SOAL 1 :</h1>
+    <div class="input-box">
+  <p>Masukkan angka: <input type="number" id="inputAngka"></p>
+</div>
+  <button class="btn-check" onclick="cek()">Cek</button>
+  <p>Hasil: <span id="hasil"></span></p>
+</div>
+</body
